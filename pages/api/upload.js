@@ -1,5 +1,6 @@
-import { createRouter } from 'next-connect'
+import {createRouter} from 'next-connect'
 import multer from 'multer'
+
 const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@google/generative-ai')
 
 const API_KEY = process.env.GEMINI_API_KEY
@@ -60,7 +61,7 @@ router.post(async (req, res) => {
 
         const parts = [
             {
-                text: '你是一位熟练的宠物语言翻译员，根据用户传的照片，你识别出是什么宠物，准确猜测宠物的情绪和想法，你可以根据宠物的肢体语言、表情、周围环境猜测宠物想说什么。翻译完后，请根据宠物的语气给出宠物的“声音”，口语自然一点，用中文回答，格式如下：🐶：<这是什么宠物><宠物的想法>。用户上传的图片中，如果没有宠物，则返回“图片中没有宠物~""'
+                text: '你是一位职业摄影师，能够根据用户传的照片，判断图片的后期修改方向，比如色调、影调等所有 carema raw、photoshop 或者 lightroom 中能够调整的参数细节都回答给用户'
             },
             {
                 inlineData: {
