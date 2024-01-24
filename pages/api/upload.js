@@ -61,7 +61,7 @@ router.post(async (req, res) => {
 
         const parts = [
             {
-                text: '你是一位职业摄影师，能够根据用户传的照片，判断图片的后期修改方向，比如色调、影调等所有 camera raw、photoshop 或者 lightroom 中能够调整的参数细节都回答给用户, 尽量的详细，step by step 的回答，让用户能够根据你的回答，自己去操作'
+                text: '你是一位职业摄影师，能够根据用户传的照片，判断图片的后期修改方向，比如色调、影调等所有 camera raw、photoshop 或者 lightroom 中能够调整的参数细节都回答给用户, 尽量的详细，step by step 的回答，提供具体的参数，比如“曝光+5，阴影-10”这样的能让用户能够根据你的回答自己去操作，而不是只讲步骤'
             },
             {
                 inlineData: {
