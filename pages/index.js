@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { Label } from '@/components/ui/label'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { CardHeader, CardContent, Card } from '@/components/ui/card'
+import {Label} from '@/components/ui/label'
+import {Input} from '@/components/ui/input'
+import {Button} from '@/components/ui/button'
+import {Card, CardContent, CardHeader} from '@/components/ui/card'
 import imageCompression from 'browser-image-compression'
-import { useState, useEffect } from 'react'
+import {useEffect, useState} from 'react'
 
 export default function components() {
     const [imagePreview, setImagePreview] = useState(
@@ -79,7 +79,10 @@ export default function components() {
         })
         if (!response.ok) {
             const errorData = await response.json()
-            setResult({ data: '我好像没有识别出来，换一张图片或者重新上传！', error: errorData.error })
+            setResult({
+                data: 'I don’t seem to recognize it. Please change the picture or upload it again.',
+                error: errorData.error
+            })
             setLoading(false)
             return
         }
@@ -91,14 +94,14 @@ export default function components() {
     return (
         <div className="container">
             <Head>
-                <title>我知道你的宠物在想什么！</title>
+                <title>I know what your pet is thinking!</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <main className="flex flex-col items-center justify-center min-h-screen py-2">
                 <Card className="max-w-md ">
                     <CardHeader>
                         <div className="flex items-center">
-                            <h2 className="text-2xl font-bold">我知道你的宠物在想什么！</h2>
+                            <h2 className="text-2xl font-bold">I know what your pet is thinking!</h2>
                         </div>
                     </CardHeader>
                     <CardContent>
@@ -120,11 +123,11 @@ export default function components() {
                                 {compressing
                                     ? '🐱🐱🐱🐱🐱🐱'
                                     : loading
-                                    ? '让我想想你的宠物在想些什么呢...'
+                                        ? 'Let me think about what your pet is thinking...'
                                     : result.error
-                                    ? `好像我没看懂它在想什么，请重试或换一张图片！`
+                                            ? `It seems that I don't understand what it is thinking. Please try again or change a picture！`
                                     : result.data ||
-                                      '🐱: 哎呀，草地上有好多枯叶，我得快点跑到草丛里，这样铲屎官就看不到我了！'}
+                                            '🐱: Oops, there are a lot of dead leaves on the grass. I have to run into the grass quickly so that the owner can’t see me！'}
                             </p>
                         </div>
                     </CardContent>
@@ -138,7 +141,8 @@ export default function components() {
                         encType="multipart/form-data"
                     >
                         <div className="grid w-full gap-4 mt-4">
-                            <Label htmlFor="catImage">上传你宠物的照片，AI告诉你它在想些什么~</Label>
+                            <Label htmlFor="catImage">Upload a photo of your pet and AI tells you what it’s
+                                thinking~</Label>
                             <Input
                                 required
                                 id="catImage"
@@ -148,26 +152,27 @@ export default function components() {
                                 onChange={previewImage}
                             />
                             <Button type="submit" variant="dark" disabled={loading || compressing}>
-                                {compressing ? '识别图像中' : loading ? '识别图像中' : '让我看看你在想什么呢'}
+                                {compressing ? 'thinking' : loading ? 'thinking' : 'Let me see what you are thinking'}
                             </Button>
                         </div>
                     </form>
                 </div>
-                <p className="tip mt-4">本服务不会收集、存储或使用任何与图片相关的个人信息</p>
-                <footer className="flex justify-center items-center">
-                    &copy; 2024
-                    {'-'}
-                    <a href="https://jingle.bio/liuziting/" target="_blank" rel="noopener noreferrer">
-                        {' '}
-                        liuziting
-                    </a>
-                    . All rights reserved.
-                </footer>
-                <p>
-                    <a href="https://gemini.smartai.wtf/">GeminiChat</a> |
-                    <a href="https://tools.smartai.wtf/"> SmartAI</a> |
-                    <a href="https://babythoughts.netlify.app/"> BabyThoughts</a>
-                </p>
+                <p className="tip mt-4">This service does not collect, store or use any personal information related to
+                    images</p>
+                {/*<footer className="flex justify-center items-center">*/}
+                {/*    &copy; 2024*/}
+                {/*    {'-'}*/}
+                {/*    <a href="https://jingle.bio/liuziting/" target="_blank" rel="noopener noreferrer">*/}
+                {/*        {' '}*/}
+                {/*        liuziting*/}
+                {/*    </a>*/}
+                {/*    . All rights reserved.*/}
+                {/*</footer>*/}
+                {/*<p>*/}
+                {/*    <a href="https://gemini.smartai.wtf/">GeminiChat</a> |*/}
+                {/*    <a href="https://tools.smartai.wtf/"> SmartAI</a> |*/}
+                {/*    <a href="https://babythoughts.netlify.app/"> BabyThoughts</a>*/}
+                {/*</p>*/}
             </main>
         </div>
     )
