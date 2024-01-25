@@ -2,9 +2,9 @@
 
 [English](README.md) | 中文
 
-Live demo:[我知道你的宠物在想什么](https://iknowwhatyourcatisthinking.netlify.app)
+Live demo:[我知道你的宠物在想什么](https://ai-vision-ten.vercel.app)
 
-<img src="https://iknowwhatyourcatisthinking.netlify.app/demo.jpg"/>
+<img src="https://ai-vision-ten.vercel.app/demo.jpg"/>
 
 ## 简介
 
@@ -28,15 +28,15 @@ Live demo:[我知道你的宠物在想什么](https://iknowwhatyourcatisthinking
 
 ### 使用 Netlify 部署（推荐）
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/liu-ziting/PetThoughts)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Sugayoiya/ai-vision)
 
-<img src="https://iknowwhatyourcatisthinking.netlify.app/v1.png"/>
+<img src="https://ai-vision-ten.vercel.app/v1.png"/>
 
 ### 使用 Vercel 部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/liu-ziting/PetThoughts&env=GEMINI_API_KEY)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Sugayoiya/ai-vision&env=GEMINI_API_KEY)
 
-<img src="https://iknowwhatyourcatisthinking.netlify.app/v2.png"/>
+<img src="https://ai-vision-ten.vercel.app/v2.png"/>
 
 > 只需单击上面的按钮并按照说明即可部署您自己的应用程序副本
 
@@ -81,18 +81,6 @@ const parts = [
 > 本项目为开源项目，使用者必须在遵循 GOOGLE 的[使用条款](https://ai.google.dev/terms)以及**法律法规**的情况下使用，不得用于非法用途。
 >
 > 根据[《生成式人工智能服务管理暂行办法》](http://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm)的要求，请勿对中国地区公众提供一切未经备案的生成式人工智能服务。
-
-## 如果有帮助
-
-> 如果这个项目对你有帮助，可以请我喝一杯咖啡。
-
-<img style="width:200px" src="https://iknowwhatyourcatisthinking.netlify.app/qrcode.jpg"/>
-
-## 交流
-
-<a href="https://discord.com/invite/mc6hPwPqZ7">
-    Join our Discord
-</a>
 
 ## 执照
 
